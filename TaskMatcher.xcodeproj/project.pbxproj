@@ -15,6 +15,8 @@
 		72CB6F271DA872570026A7E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72CB6F251DA872570026A7E0 /* LaunchScreen.storyboard */; };
 		72CB6F321DA872570026A7E0 /* TaskMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CB6F311DA872570026A7E0 /* TaskMatcherTests.swift */; };
 		72CB6F3D1DA872570026A7E0 /* TaskMatcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CB6F3C1DA872570026A7E0 /* TaskMatcherUITests.swift */; };
+		72CB6F4B1DA873720026A7E0 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CB6F4A1DA873720026A7E0 /* Activity.swift */; };
+		72CB6F4D1DA88E680026A7E0 /* AddTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CB6F4C1DA88E680026A7E0 /* AddTaskController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		72CB6F381DA872570026A7E0 /* TaskMatcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskMatcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CB6F3C1DA872570026A7E0 /* TaskMatcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMatcherUITests.swift; sourceTree = "<group>"; };
 		72CB6F3E1DA872570026A7E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72CB6F4A1DA873720026A7E0 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		72CB6F4C1DA88E680026A7E0 /* AddTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				72CB6F231DA872570026A7E0 /* Assets.xcassets */,
 				72CB6F251DA872570026A7E0 /* LaunchScreen.storyboard */,
 				72CB6F281DA872570026A7E0 /* Info.plist */,
+				72CB6F4A1DA873720026A7E0 /* Activity.swift */,
+				72CB6F4C1DA88E680026A7E0 /* AddTaskController.swift */,
 			);
 			path = TaskMatcher;
 			sourceTree = "<group>";
@@ -263,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				72CB6F1F1DA872570026A7E0 /* DetailViewController.swift in Sources */,
+				72CB6F4D1DA88E680026A7E0 /* AddTaskController.swift in Sources */,
 				72CB6F1D1DA872570026A7E0 /* MasterViewController.swift in Sources */,
+				72CB6F4B1DA873720026A7E0 /* Activity.swift in Sources */,
 				72CB6F1B1DA872570026A7E0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
