@@ -13,7 +13,7 @@ protocol TaskReceiverDelegate {
     func receiveTask(task: Activity)
 }
 
-class AddTaskController : UIViewController {
+class AddTaskController : UITableViewController {
     var delegate : TaskReceiverDelegate?
     
     override func viewDidLoad() {

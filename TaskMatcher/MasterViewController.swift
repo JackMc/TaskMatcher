@@ -41,7 +41,6 @@ class MasterViewController: UITableViewController, TaskReceiverDelegate {
     }
 
     // MARK: - Segues
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
@@ -52,11 +51,27 @@ class MasterViewController: UITableViewController, TaskReceiverDelegate {
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
-        else if segue.identifier == "addTask" {
-            let controller = (segue.destination as! UINavigationController).topViewController as! AddTaskController
+    }
+
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        // If we're not in a storyboard, this method shouldn't be called
+        let navigationController = self.storyboard!.instantiateViewController(withIdentifier: "addTask") as! UINavigationController
+        let addTaskController = navigationController.viewControllers[0] as! AddTaskController
+        addTaskController.delegate = self
+
+        // Needs to happen before we present the view if we're on an iPad
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
+            navigationController.modalPresentationStyle = UIModalPresentationStyle.popover
+        }
+
+        // Always present the view controller
+        self.present(navigationController, animated: true)
+
+        // This gives the popover the "anchor point"
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
+            let presentationController = navigationController.popoverPresentationController
             
-            // Set ourselves up to receive back the task
-            controller.delegate = self
+            presentationController!.barButtonItem = self.navigationItem.rightBarButtonItem
         }
     }
 
